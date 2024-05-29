@@ -1,0 +1,36 @@
+<app-menu></app-menu>
+<section class="py-6">
+    <form (ngSubmit)="onUpdate()" class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="./assets/images/{{producto.foto}}"
+                    alt="Imagen" /></div>
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bolder">{{producto.servicio}}</h1>
+                <label form="Categoria" style="margin-top: 20px;"><b>Categoria</b></label>
+                <select name="Categoria" [(ngModel)]="producto.categoria" style="margin-left: 10px;">
+                    <option>Técnologia</option>
+                    <option>Hogar</option>
+                    <option>Abarrotes</option>
+                    <option>Farmacia</option>
+                </select>
+                <div class="form-group">
+                    <label form="precio" style="margin-top: 20px;"><b>Precio:$</b></label>
+                    <input class="form-control me-3" type="number" id="precio" name="precio" [(ngModel)]="producto.precio" min="50"
+                        required minlength="2" maxlength="3" placeholder="Precios mayores a $100">
+                </div>
+                <div>
+                    <label form="descripcion" style="margin-top: 20px;"><b>Descripción</b></label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion"
+                        [(ngModel)]="producto.descripcion" required>
+                </div>
+                <input style="margin: 30px;" #fileInput type="file" (change)="onFileSelected()">
+                <div class="d-flex">
+                    <button class="btn btn-success flex-shrink-0" type="submit" style="margin-right: 5px; margin-top: 30px; width: 150px; margin: 20px;">
+                      <i class="bi-cart-fill me-1"></i>
+                      Actualizar
+                    </button>
+                  </div>
+            </div>
+        </div>
+    </form>
+</section>

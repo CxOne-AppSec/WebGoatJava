@@ -1,0 +1,26 @@
+<app-menu></app-menu>
+<div class="grid-container">
+    <div *ngFor=" let Producto of producto" class="producto-card p-1 d-flex flex-column justify-content-between">
+        <div class="d-flex justify-content-center">
+            <img class="producto-thumbnail" src="./assets/images/{{Producto.foto}}" alt="Imagen">
+        </div>
+        <div class="card-content">
+            <h1 class="text-truncate">{{Producto.servicio}}</h1>
+            <span class="custom-span">{{Producto.precio | currency}}</span>
+            <ul class="list-group justify-content-center align-items-center">
+                <li class="list-group-item" *ngIf="isAdmin">
+                    <button class="btn btn-danger" (click)="delete(Producto.id)" style="margin-left: 10px;"><i
+                            class="fa-solid fa-trash"></i> Borrar</button>
+                </li>
+                <li class="list-group-item" *ngIf="isAdmin">
+                    <button class="btn btn-info" routerLink="/editarproducto/{{Producto.id}}"
+                        style="margin-left: 10px;"><i class="fa-solid fa-pen-to-square"></i> Editar</button>
+                </li>
+                <li class="list-group-item">
+                    <button class="btn btn-primary" routerLink="/detallesproducto/{{Producto.id}}"
+                        style="margin-left: 10px;"><i class="fa-sharp fa-solid fa-eye"></i> Detalles</button>
+                </li>
+            </ul> 
+        </div>
+    </div>
+</div>

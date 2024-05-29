@@ -1,0 +1,41 @@
+.card {
+    max-width: 500px; /* Ancho máximo de la tarjeta */
+    padding: 5px;
+    margin: 5px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  /* Estilo para el enlace de recuperar contraseña */
+/* Estilo para las etiquetas */
+.form-group label {
+    margin-bottom: 10px; /* Ajusta este valor según tu preferencia */
+  }
+  
+  /* Estilo para los campos de entrada */
+  .form-group input {
+    margin-bottom: 10px; /* Ajusta este valor según tu preferencia */
+  }  
+  
+  /* Ajustes de estilo para el botón */
+  button.btn-block {
+    width: 100%;
+  }
+  
+  /* Opcional: Estilo para la barra de navegación */
+  .nav-tabs {
+    border-bottom: none; /* Elimina el borde inferior de las pestañas de navegación */
+  }
+  
+  .image-container {
+    width: 100%; /* Ancho del contenedor */
+    text-align: center; /* Alineación del texto al centro (esto afecta a la imagen) */
+  }
+  
+  .image-container img {
+    display: inline-block; /* Asegura que la imagen se muestre en línea */
+  }
+  #userImage {
+    width: 200px; /* Ajusta el tamaño según tus necesidades (aquí se establece a 50 píxeles) */
+  }
+  

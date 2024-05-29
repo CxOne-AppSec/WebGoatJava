@@ -1,0 +1,40 @@
+<app-menu></app-menu>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card">
+        <div class="card-body">
+            <form (ngSubmit)="onCreate()" #formulario="ngForm">
+                <div class="form-group">
+                    <label form="servicio" style="font-size: 20px;"><b>Servicio:</b></label>
+                    <input type="text" class="form-control" id="servicio" name="servicio" [(ngModel)]="servicio" required minlength="10" maxlength="50" autocomplete=off>
+                </div>
+                <div class="form-group">
+                    <label for="Categoria" style="margin-top: 20px;"><b>Categoria:  </b></label>
+                    <select name="Categoria" [(ngModel)]="categoria" class="form-select">
+                        <option>Técnologia</option>
+                        <option>Hogar</option>
+                        <option>Abarrotes</option>
+                        <option>Farmacia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label form="precio" style="margin-top: 20px; font-size: 20px;"><b>Precio:$</b></label>
+                    <input type="number" class="form-control" id="precio" name="precio" [(ngModel)]="precio" required minlength="2" maxlength="3" placeholder="Precios mayores a $50">
+                </div>
+        
+                <div class="form-group">
+                    <label form="descripcion" style="margin-top: 20px; font-size: 20px;"><b>Descripcion:</b></label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" required minlength="10" maxlength="100" autocomplete=off>
+                </div>
+                <div class="form-group">
+                    <input type="file" id="file" name="file" [(ngModel)]="foto" style="margin-top: 20px;">
+               </div>
+               <div class="form-group">
+                 <input type="hidden" id="url" name="url" [(ngModel)]="url" style="margin-top: 20px;">
+                </div>
+                <span>
+                    <button class="btn btn-success" type="submit" style="margin-right: 10px; margin-top: 20px; width: 150px;"><i class="fa-solid fa-circle-plus"></i> Agregar </button>
+                </span>   
+            </form>
+        </div>
+    </div>
+</div>
