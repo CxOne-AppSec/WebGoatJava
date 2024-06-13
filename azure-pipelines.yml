@@ -20,7 +20,7 @@ steps:
 - task: Checkmarx AST@2
   inputs:
     CheckmarxService: 'CxSAST Connection'
-    projectName: '$cxoneappsec/WebGoatJava-backend/WebGoatJava-backend'
-    branchName: '$Dev'
+    projectName: '${Build.Repository.Name}'
+    branchName: '${Build.SourceBranchName}'
     tenantName: 'nfr_datastream'
     additionalParams: '--scan-types {scanner}'
