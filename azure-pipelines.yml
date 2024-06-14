@@ -19,8 +19,7 @@ steps:
   displayName: 'Run a multi-line script'
 - task: Checkmarx AST@2
   inputs:
-    CheckmarxService: 'CxSAST Connection'
-    projectName: '${Build.Repository.Name}'
-    branchName: '${Build.SourceBranchName}'
+    CheckmarxService: 'Pipeline Azure'
+    projectName: '$(Build.Repository.Name)'
+    branchName: '$(Build.SourceBranchName)'
     tenantName: 'nfr_datastream'
-    additionalParams: '--scan-types {scanner}'
